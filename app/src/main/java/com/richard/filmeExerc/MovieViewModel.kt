@@ -8,8 +8,8 @@ import com.richard.filmeExerc.placeholder.PlaceholderContent
 @Suppress("UNCHECKED_CAST")
 class MovieViewModel: ViewModel() {
 
-    val movieDetailsLiveData: LiveData<MovieDetails>
-        get() = _movieDetailsLiveData
+    val movieDetailsLiveData: LiveData<List<PlaceholderContent.PlaceholderItem>>
+        get() = _movieDetailsLiveData as LiveData<List<PlaceholderContent.PlaceholderItem>>
     private val _movieDetailsLiveData = MutableLiveData<MovieDetails>()
 
     val movieListLiveData: LiveData<List<PlaceholderContent.PlaceholderItem>>
