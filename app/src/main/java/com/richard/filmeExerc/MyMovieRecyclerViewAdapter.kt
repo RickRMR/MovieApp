@@ -18,7 +18,7 @@ class MyMovieRecyclerViewAdapter(
 
     private val values: MutableList<PlaceholderItem> = ArrayList<PlaceholderItem>()
 
-    fun updateData(hqList: MutableLiveData<List<PlaceholderItem>>?){
+    fun updateData(hqList: List<PlaceholderItem>?){
         values.clear()
         values.addAll(hqList as Collection<PlaceholderItem>)
         notifyDataSetChanged()

@@ -45,7 +45,7 @@ class MovieFragment : Fragment(), MovieItemListener {
 
     private fun initObservers(){
         viewModel.movieListLiveData.observe(viewLifecycleOwner, Observer{
-            adapter.updateData(it as MutableLiveData<List<PlaceholderContent.PlaceholderItem>>?)
+            adapter.updateData(it as List<PlaceholderContent.PlaceholderItem>?)
         })
 
         viewModel.movieDetailsLiveData.observe(viewLifecycleOwner, {
